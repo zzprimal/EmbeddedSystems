@@ -20,7 +20,7 @@ gpio_sel_calc:
     add r1, #1
     B gpio_sel_calc
 gpio_sel_calc_fin:
-    mov r3, #32
+    mov r3, #4
     mul r4, r1, r3
     add r4, r0 ;//# r4 is register address
     mov r3, #3
@@ -60,7 +60,7 @@ clear:
     add r0, #GPIO_CLR_REG_OFF
     ldr r1, =#GPIO_PIN
     ldr r2, =1
-    lsl r2, r2, r1
+    lsl r2, r2, r1 ;//# does not account for the fact if GPIO_PIN is > 31 which is fine since RPI 4 doesnt even have that many gpio pins
     str r2, [r0]
     bx lr
 
