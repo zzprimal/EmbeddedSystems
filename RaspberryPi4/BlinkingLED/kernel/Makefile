@@ -3,4 +3,4 @@ default:
 	arm-none-eabi-ld ledblink.o -o kernel7l.elf
 	arm-none-eabi-objcopy kernel7l.elf -O binary kernel7l.img
 clean:
-	rm -r kernel7l.elf kernel7l.img
+	rm -r kernel7l.elf kernel7l.img ledblink.o

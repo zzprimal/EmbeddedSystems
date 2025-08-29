@@ -1,0 +1,2 @@
+OS for blinking an led connected to GPIO pin 17 and to ground (GPIO pin can be configured using GPIO_PIN macro in ledblink.s), to setup just make then put files in a micro
+sd card and insert into a raspberry pi 4
